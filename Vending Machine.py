@@ -112,7 +112,16 @@ def vending_machine():
         item_code = get_user_input()
         # using 'exit' to end the program 
         if item_code.lower() == 'exit':
-            print(print_colored("Thank you for using my vending machine. enjoy your meal <3", 'purple'))
+            print(print_colored(""" _____ _                 _                          _                         
+|_   _| |__   __ _ _ __ | | __  _   _  ___  _   _  | |                        
+  | | | '_ \ / _` | '_ \| |/ / | | | |/ _ \| | | | | |                        
+  | | | | | | (_| | | | |   <  | |_| | (_) | |_| | |_|                        
+ _|_|_|_| |_|\__,_|_| |_|_|\_\  \__, |\___/ \__,_| (_)                      _ 
+| ____|_ __  (_) ___  _   _   _ |___/___  _   _ _ __   _ __ ___   ___  __ _| |
+|  _| | '_ \ | |/ _ \| | | | | | | |/ _ \| | | | '__| | '_ ` _ \ / _ \/ _` | |
+| |___| | | || | (_) | |_| | | |_| | (_) | |_| | |    | | | | | |  __/ (_| | |
+|_____|_| |_|/ |\___/ \__, |  \__, |\___/ \__,_|_|    |_| |_| |_|\___|\__,_|_|
+           |__/       |___/   |___/                                           """, 'purple'))
             break
         # checking if the entered item code is valid 
         if any(item_code == item['code'] for items in my_vending_machine_menu.values() for item in items):
